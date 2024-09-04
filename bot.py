@@ -4,7 +4,7 @@ import pyautogui
 import time 
 
 async def main():
-    bot = telegram.Bot(token='6541175839:AAEdVSOXC5uGSr8CnnWHMnv_JhswKbbW5JY')
+    bot = telegram.Bot(token='your_telegram_bot_token')
     async with bot:
         await bot.send_message(text="hello",chat_id=-4117162001)
 

